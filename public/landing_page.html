@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No-Cost Solar & Battery | Pi Energy Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #0a1628;
+            color: #e1e8ed;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        /* Header */
+        header {
+            background: #0f1d2f;
+            padding: 20px 0;
+            border-bottom: 1px solid #1a2942;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #00d9ff 0%, #0099cc 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 20px;
+            color: #0a1628;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        
+        .session-info {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            color: #8b9bae;
+            font-size: 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 100px 0 80px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 4.5em;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 30px;
+            line-height: 1.1;
+        }
+        
+        .hero .highlight {
+            color: #00d9ff;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.7em;
+            color: #8b9bae;
+            margin-bottom: 50px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #00d9ff 0%, #0099cc 100%);
+            color: #0a1628;
+            padding: 22px 55px;
+            border-radius: 12px;
+            font-size: 1.4em;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 8px 25px rgba(0, 217, 255, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(0, 217, 255, 0.4);
+        }
+        
+        /* Stats Section */
+        .stats {
+            padding: 60px 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .stat-card {
+            text-align: center;
+            background: rgba(0, 217, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(0, 217, 255, 0.1);
+        }
+        
+        .stat-number {
+            font-size: 3.5em;
+            font-weight: 700;
+            color: #00d9ff;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1.25em;
+            color: #8b9bae;
+        }
+        
+        /* What We Extract Section */
+        .extract-section {
+            padding: 80px 0;
+            background: #0f1d2f;
+        }
+        
+        .section-title {
+            font-size: 2.8em;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .extract-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        
+        .extract-card {
+            background: #1a2942;
+            padding: 35px 30px;
+            border-radius: 15px;
+            border: 1px solid #243449;
+            transition: all 0.3s;
+        }
+        
+        .extract-card:hover {
+            border-color: #00d9ff;
+            transform: translateY(-5px);
+        }
+        
+        .extract-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 217, 255, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .extract-card h3 {
+            font-size: 1.45em;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        
+        .extract-card p {
+            color: #8b9bae;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            padding: 80px 0;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .benefit-card {
+            background: #1a2942;
+            padding: 40px 35px;
+            border-radius: 15px;
+            border: 1px solid #243449;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #00d9ff 0%, #0099cc 100%);
+        }
+        
+        .benefit-number {
+            font-size: 4em;
+            font-weight: 700;
+            color: rgba(0, 217, 255, 0.1);
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        
+        .benefit-card h3 {
+            font-size: 1.65em;
+            color: #ffffff;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .benefit-card p {
+            color: #8b9bae;
+            font-size: 1.05em;
+            line-height: 1.8;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Process Section */
+        .process {
+            padding: 80px 0;
+            background: #0f1d2f;
+        }
+        
+        .process-timeline {
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .process-step {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .process-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 40px;
+            top: 80px;
+            width: 2px;
+            height: calc(100% - 30px);
+            background: linear-gradient(180deg, #00d9ff 0%, rgba(0, 217, 255, 0.2) 100%);
+        }
+        
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #1a2942 0%, #243449 100%);
+            border: 3px solid #00d9ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            font-weight: 700;
+            color: #00d9ff;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .step-content {
+            background: #1a2942;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #243449;
+        }
+        
+        .step-content h3 {
+            font-size: 1.65em;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        
+        .step-content p {
+            color: #8b9bae;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #0f1d2f 0%, #1a2942 100%);
+        }
+        
+        .cta-section h2 {
+            font-size: 3.3em;
+            color: #ffffff;
+            margin-bottom: 25px;
+        }
+        
+        .cta-section p {
+            font-size: 1.45em;
+            color: #8b9bae;
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Footer */
+        footer {
+            background: #0a1628;
+            padding: 60px 0 30px;
+            border-top: 1px solid #1a2942;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h4 {
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-size: 1.25em;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-section a {
+            color: #8b9bae;
+            text-decoration: none;
+            font-size: 1.05em;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: #00d9ff;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #1a2942;
+            color: #8b9bae;
+            font-size: 1.05em;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .extract-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .extract-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-step {
+                grid-template-columns: 60px 1fr;
+                gap: 20px;
+            }
+            
+            .step-number {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5em;
+            }
+        }
+
+        /* Chat Widget Styles */
+        #pi-chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00d9ff 0%, #0099cc 100%);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 217, 255, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: transform 0.3s ease;
+        }
+
+        #pi-chat-button:hover {
+            transform: scale(1.1);
+        }
+
+        #pi-chat-button svg {
+            width: 30px;
+            height: 30px;
+            fill: #0a1628;
+        }
+
+        #pi-chat-window {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 380px;
+            height: 600px;
+            background: #0f1d2f;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            display: none;
+            flex-direction: column;
+            z-index: 9999;
+            border: 2px solid #00d9ff;
+        }
+
+        #pi-chat-window.active {
+            display: flex;
+        }
+
+        .chat-header {
+            background: linear-gradient(135deg, #00d9ff 0%, #0099cc 100%);
+            padding: 20px;
+            border-radius: 18px 18px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-header h3 {
+            margin: 0;
+            color: #0a1628;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .chat-close {
+            background: none;
+            border: none;
+            color: #0a1628;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .message {
+            max-width: 80%;
+            padding: 12px 16px;
+            border-radius: 12px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .message.user {
+            background: #00d9ff;
+            color: #0a1628;
+            align-self: flex-end;
+            border-bottom-right-radius: 4px;
+        }
+
+        .message.assistant {
+            background: #1a2942;
+            color: #e1e8ed;
+            align-self: flex-start;
+            border-bottom-left-radius: 4px;
+        }
+
+        .typing-indicator {
+            display: none;
+            padding: 12px 16px;
+            background: #1a2942;
+            border-radius: 12px;
+            align-self: flex-start;
+            max-width: 80px;
+        }
+
+        .typing-indicator.active {
+            display: block;
+        }
+
+        .typing-indicator span {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #00d9ff;
+            border-radius: 50%;
+            margin: 0 2px;
+            animation: typing 1.4s infinite;
+        }
+
+        .typing-indicator span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .typing-indicator span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes typing {
+            0%, 60%, 100% {
+                opacity: 0.3;
+                transform: translateY(0);
+            }
+            30% {
+                opacity: 1;
+                transform: translateY(-10px);
+            }
+        }
+
+        .chat-input {
+            padding: 20px;
+            border-top: 1px solid #1a2942;
+            display: flex;
+            gap: 10px;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 1px solid #1a2942;
+            border-radius: 25px;
+            background: #1a2942;
+            color: #e1e8ed;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .chat-input input:focus {
+            border-color: #00d9ff;
+        }
+
+        .chat-input button {
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #00d9ff 0%, #0099cc 100%);
+            color: #0a1628;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .chat-input button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Consent Modal */
+        #pi-consent-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 22, 40, 0.95);
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #pi-consent-overlay.active {
+            display: flex;
+        }
+
+        #pi-consent-modal {
+            background: #0f1d2f;
+            border: 2px solid #00d9ff;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            width: calc(100% - 40px);
+            box-shadow: 0 20px 60px rgba(0, 217, 255, 0.3);
+        }
+
+        #pi-consent-modal h3 {
+            color: #00d9ff;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #pi-consent-modal p {
+            color: #e1e8ed;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        #pi-consent-modal ul {
+            color: #8b9bae;
+            margin: 15px 0 15px 20px;
+            line-height: 1.8;
+        }
+
+        .pi-consent-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .pi-consent-button {
+            flex: 1;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .pi-consent-accept {
+            background: linear-gradient(135deg, #00d9ff 0%, #0099cc 100%);
+            color: #0a1628;
+        }
+
+        .pi-consent-accept:hover {
+            transform: translateY(-2px);
+        }
+
+        .pi-consent-decline {
+            background: #1a2942;
+            color: #e1e8ed;
+            border: 1px solid #2a3952;
+        }
+
+        @media (max-width: 480px) {
+            #pi-chat-window {
+                width: calc(100% - 20px);
+                height: calc(100% - 100px);
+                right: 10px;
+                bottom: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">Pi</div>
+                    <div class="logo-text">Pi Energy</div>
+                </div>
+                <div class="session-info">
+                    <span>Gold Coast to Brisbane Pilot Program</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="eligibility">
+        <div class="container">
+            <h1>
+                <span class="highlight">No-Cost</span> Solar & Battery<br>
+                For Your Home
+            </h1>
+            <p class="hero-subtitle">
+                Zero upfront investment. Pay only $0.26/kWh anytime rate for the energy you use.
+                Property supply charges passed through at cost — no mark-up. No surprises. Complete energy independence.
+            </p>
+            <a href="https://app.principleinnovation.tech" class="cta-button">Check Eligibility</a>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats container">
+        <div class="stat-card">
+            <span class="stat-number">$0</span>
+            <span class="stat-label">Upfront Cost</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-number">$0.26</span>
+            <span class="stat-label">Per kWh Anytime Rate</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-number">1,000</span>
+            <span class="stat-label">Pilot Program Homes</span>
+        </div>
+    </section>
+
+    <!-- What We Extract Section -->
+    <section class="extract-section">
+        <div class="container">
+            <h2 class="section-title">What We Analyze From Your Energy Bills</h2>
+            <div class="extract-grid">
+                <div class="extract-card">
+                    <div class="extract-icon">⚡</div>
+                    <h3>Energy Flows</h3>
+                    <p>Understanding your home's energy flows for optimal energy management</p>
+                </div>
+                <div class="extract-card">
+                    <div class="extract-icon">⚡</div>
+                    <h3>Usage Data</h3>
+                    <p>Daily avg kWh, grid/solar consumption, time-of-use breakdown for accurate sizing</p>
+                </div>
+                <div class="extract-card">
+                    <div class="extract-icon">💰</div>
+                    <h3>Rates & Tariffs</h3>
+                    <p>Fixed/TOU rates, supply charges, feed-in tariff to calculate your savings</p>
+                </div>
+                <div class="extract-card">
+                    <div class="extract-icon">🔋</div>
+                    <h3>Account Details</h3>
+                    <p>NMI, retailer, power phases, existing solar details for system design</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Why Pi Energy?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-number">01</div>
+                    <h3>Zero Capital Investment</h3>
+                    <p>No purchase price, no loans, no hidden financing. Pi owns and maintains all equipment including 40-50kWh battery storage. You simply pay for energy used.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-number">02</div>
+                    <h3>Complete Peace of Mind</h3>
+                    <p>Installation, 24/7 monitoring, maintenance, and equipment replacement all included. No surprise bills, repair costs, or maintenance fees. Ever.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-number">03</div>
+                    <h3>Substantial Backup Power</h3>
+                    <p>Large-capacity batteries provide 1.5-2 days of backup during outages. Stay powered through storms and grid disruptions with complete energy security.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-number">04</div>
+                    <h3>Energy Independence</h3>
+                    <p>Generate and store your own clean energy. Reduce grid reliance and exposure to volatile energy markets. Control your energy future.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-number">05</div>
+                    <h3>Transparent Simple Pricing</h3>
+                    <p>One simple anytime rate: $0.26/kWh for all energy consumed. Property supply and network charges passed through at cost with zero mark-up. No peak/off-peak complexity. What you see is what you pay.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-number">06</div>
+                    <h3>VPP Network Benefits</h3>
+                    <p>Your battery joins Pi's Virtual Power Plant. Participate in energy arbitrage and grid stabilization. Pi handles all optimization while you enjoy the benefits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Simple 6-Step Journey</h2>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Eligibility Confirmation</h3>
+                        <p>We verify your property location (Gold Coast to Brisbane), ownership status, and system requirements. You'll receive a personalized savings estimate and system recommendation.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Energy Bill Analysis</h3>
+                        <p>Upload your recent bills (PDF or images). Our AI-powered tool analyzes your consumption patterns, rates, and usage data to determine your eligibility and potential savings. Instant result.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Site Inspection - $297</h3>
+                        <p>Safety, compliance and performance assessment of your property and any existing energy systems. We check electrical infrastructure, verify installation requirements, and assess current solar/battery equipment (if present). <strong>Important:</strong> <a href="/pricing_disclosure.html#infrastructure" style="color: #00d9ff; text-decoration: underline;">Infrastructure upgrades or existing system remediation may be required at your cost.</a> Where existing systems have defects, Pi may offer replacement at no cost, but removal and disposal costs apply. Inspection fee fully credited to your monthly energy bill once operational. Detailed inspection report provided.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Custom Design & Engineering</h3>
+                        <p>Our engineers design your system and submit network connection application to Energex. We manage the entire approval process so you don't have to. You're kept informed every step.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Professional Installation</h3>
+                        <p>SAA-accredited installers complete your system to Australian Standards AS4777 and AS5033. Energy infrastructure, monitoring equipment, and safety systems—everything designed for energy security and energy price certainty.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Activation & Ongoing Support</h3>
+                        <p>System connected to Pi's 24/7 monitoring platform and VPP network. Start generating and storing clean energy immediately. Pay only $0.26/kWh anytime rate for energy consumed, plus property supply charges at cost — no mark-up.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="faq">
+        <div class="container">
+            <h2>Ready to Take Control of Your Energy?</h2>
+            <p>Join the pilot program and start your journey to energy independence. Upload your bills now for instant analysis and eligibility check.</p>
+            <a href="https://app.principleinnovation.tech" class="cta-button">Check Eligibility</a>
+        </div>
+    </section>
+
+    <!-- Pi Energy Footer -->
+    <script src="/pi-footer.js"></script>
+
+    <!-- Consent Modal -->
+    <div id="pi-consent-overlay">
+        <div id="pi-consent-modal">
+            <h3>Welcome to Pi Energy Chat</h3>
+            <p>Before we begin, please note:</p>
+            <ul>
+                <li>This conversation will be logged for quality and follow-up</li>
+                <li>We use conversation data to improve our service</li>
+                <li>If you provide contact details, we may use them to respond to your questions</li>
+            </ul>
+            <p><a href="/privacy_policy.html" target="_blank" style="color: #00d9ff;">Privacy Policy</a></p>
+            <div class="pi-consent-buttons">
+                <button class="pi-consent-button pi-consent-accept" id="pi-accept-consent">
+                    I Understand
+                </button>
+                <button class="pi-consent-button pi-consent-decline" id="pi-decline-consent">
+                    No Thanks
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Button -->
+    <button id="pi-chat-button">
+        <svg viewBox="0 0 24 24">
+            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+        </svg>
+    </button>
+
+    <!-- Chat Window -->
+    <div id="pi-chat-window">
+        <div class="chat-header">
+            <h3>Pi Energy Assistant</h3>
+            <button class="chat-close" id="chat-close">×</button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message assistant">
+                Hi! I'm Pi's AI assistant. How can I help you learn about our no-cost solar and battery program?
+            </div>
+        </div>
+        <div class="typing-indicator" id="typing-indicator">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chat-input" placeholder="Type your message...">
+            <button id="chat-send">Send</button>
+        </div>
+    </div>
+
+    <script>
+        // Configuration
+        const CONFIG = {
+            webhookUrl: 'https://n8n-production-13bb.up.railway.app/webhook/pi-chat',
+            consentStorageKey: 'pi-chat-consent',
+            consentVersion: '1.0'
+        };
+
+        // State
+        const state = {
+            conversationHistory: [],
+            sessionId: null,
+            consentGiven: false
+        };
+
+        // Elements
+        const chatButton = document.getElementById('pi-chat-button');
+        const chatWindow = document.getElementById('pi-chat-window');
+        const chatClose = document.getElementById('chat-close');
+        const chatMessages = document.getElementById('chat-messages');
+        const chatInput = document.getElementById('chat-input');
+        const chatSend = document.getElementById('chat-send');
+        const typingIndicator = document.getElementById('typing-indicator');
+        const consentOverlay = document.getElementById('pi-consent-overlay');
+        const acceptConsent = document.getElementById('pi-accept-consent');
+        const declineConsent = document.getElementById('pi-decline-consent');
+
+        // Generate session ID
+        function generateSessionId() {
+            return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+        }
+
+        // Check existing consent
+        function checkConsent() {
+            const stored = localStorage.getItem(CONFIG.consentStorageKey);
+            if (stored) {
+                try {
+                    const consent = JSON.parse(stored);
+                    const expiryDate = new Date(consent.timestamp);
+                    expiryDate.setDate(expiryDate.getDate() + 365);
+                    
+                    if (new Date() < expiryDate && consent.version === CONFIG.consentVersion) {
+                        state.consentGiven = true;
+                        state.sessionId = generateSessionId();
+                        return true;
+                    }
+                } catch (e) {
+                    localStorage.removeItem(CONFIG.consentStorageKey);
+                }
+            }
+            return false;
+        }
+
+        // Save consent
+        function saveConsent() {
+            const consentData = {
+                given: true,
+                timestamp: new Date().toISOString(),
+                version: CONFIG.consentVersion
+            };
+            localStorage.setItem(CONFIG.consentStorageKey, JSON.stringify(consentData));
+            state.consentGiven = true;
+            state.sessionId = generateSessionId();
+        }
+
+        // Add message to chat
+        function addMessage(text, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}`;
+            messageDiv.textContent = text;
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // Show/hide typing indicator
+        function showTyping() {
+            typingIndicator.classList.add('active');
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function hideTyping() {
+            typingIndicator.classList.remove('active');
+        }
+
+        // Send message
+        async function sendMessage() {
+            const message = chatInput.value.trim();
+            if (!message) return;
+
+            if (!state.consentGiven) {
+                consentOverlay.classList.add('active');
+                return;
+            }
+
+            addMessage(message, 'user');
+            chatInput.value = '';
+            showTyping();
+
+            try {
+                const response = await fetch(CONFIG.webhookUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: message,
+                        consentGiven: state.consentGiven,
+                        consentTimestamp: new Date().toISOString(),
+                        sessionId: state.sessionId,
+                        history: state.conversationHistory,
+                        sourcePage: window.location.href
+                    })
+                });
+
+                const data = await response.json();
+                hideTyping();
+
+                if (data.response) {
+                    addMessage(data.response, 'assistant');
+                    state.conversationHistory = data.conversationHistory || [];
+                } else {
+                    addMessage('Sorry, I encountered an error. Please try again.', 'assistant');
+                }
+            } catch (error) {
+                hideTyping();
+                addMessage('Sorry, I could not connect. Please try again later.', 'assistant');
+                console.error('Chat error:', error);
+            }
+        }
+
+        // Event listeners
+        chatButton.addEventListener('click', () => {
+            if (!checkConsent() && !state.consentGiven) {
+                consentOverlay.classList.add('active');
+            } else {
+                chatWindow.classList.add('active');
+                chatInput.focus();
+            }
+        });
+
+        chatClose.addEventListener('click', () => {
+            chatWindow.classList.remove('active');
+        });
+
+        chatSend.addEventListener('click', sendMessage);
+
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        acceptConsent.addEventListener('click', () => {
+            saveConsent();
+            consentOverlay.classList.remove('active');
+            chatWindow.classList.add('active');
+            chatInput.focus();
+        });
+
+        declineConsent.addEventListener('click', () => {
+            consentOverlay.classList.remove('active');
+        });
+
+        // Initialize
+        checkConsent();
+    </script>
+</body>
+</html>

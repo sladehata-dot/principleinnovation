@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No-Cost Solar & Battery | Pi Energy Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #0a1628;
+            color: #e1e8ed;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        /* Header */
+        header {
+            background: #0f1d2f;
+            padding: 20px 0;
+            border-bottom: 1px solid #1a2942;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #00d9ff 0%, #0099cc 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 20px;
+            color: #0a1628;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        
+        .session-info {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            color: #8b9bae;
+            font-size: 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 100px 0 80px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 4.5em;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 30px;
+            line-height: 1.1;
+        }
+        
+        .hero .highlight {
+            color: #00d9ff;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.7em;
+            color: #8b9bae;
+            margin-bottom: 50px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #00d9ff 0%, #0099cc 100%);
+            color: #0a1628;
+            padding: 22px 55px;
+            border-radius: 12px;
+            font-size: 1.4em;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 8px 25px rgba(0, 217, 255, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(0, 217, 255, 0.4);
+        }
+        
+        /* Stats Section */
+        .stats {
+            padding: 60px 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .stat-card {
+            text-align: center;
+            background: rgba(0, 217, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(0, 217, 255, 0.1);
+        }
+        
+        .stat-number {
+            font-size: 3.5em;
+            font-weight: 700;
+            color: #00d9ff;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1.25em;
+            color: #8b9bae;
+        }
+        
+        /* What We Extract Section */
+        .extract-section {
+            padding: 80px 0;
+            background: #0f1d2f;
+        }
+        
+        .section-title {
+            font-size: 2.8em;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .extract-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        
+        .extract-card {
+            background: #1a2942;
+            padding: 35px 30px;
+            border-radius: 15px;
+            border: 1px solid #243449;
+            transition: all 0.3s;
+        }
+        
+        .extract-card:hover {
+            border-color: #00d9ff;
+            transform: translateY(-5px);
+        }
+        
+        .extract-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 217, 255, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .extract-card h3 {
+            font-size: 1.45em;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        
+        .extract-card p {
+            color: #8b9bae;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            padding: 80px 0;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .benefit-card {
+            background: #1a2942;
+            padding: 40px 35px;
+            border-radius: 15px;
+            border: 1px solid #243449;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #00d9ff 0%, #0099cc 100%);
+        }
+        
+        .benefit-number {
+            font-size: 4em;
+            font-weight: 700;
+            color: rgba(0, 217, 255, 0.1);
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        
+        .benefit-card h3 {
+            font-size: 1.65em;
+            color: #ffffff;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .benefit-card p {
+            color: #8b9bae;
+            font-size: 1.05em;
+            line-height: 1.8;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Process Section */
+        .process {
+            padding: 80px 0;
+            background: #0f1d2f;
+        }
+        
+        .process-timeline {
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .process-step {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .process-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 40px;
+            top: 80px;
+            width: 2px;
+            height: calc(100% - 30px);
+            background: linear-gradient(180deg, #00d9ff 0%, rgba(0, 217, 255, 0.2) 100%);
+        }
+        
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #1a2942 0%, #243449 100%);
+            border: 3px solid #00d9ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            font-weight: 700;
+            color: #00d9ff;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .step-content {
+            background: #1a2942;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #243449;
+        }
+        
+        .step-content h3 {
+            font-size: 1.65em;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        
+        .step-content p {
+            color: #8b9bae;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #0f1d2f 0%, #1a2942 100%);
+        }
+        
+        .cta-section h2 {
+            font-size: 3.3em;
+            color: #ffffff;
+            margin-bottom: 25px;
+        }
+        
+        .cta-section p {
+            font-size: 1.45em;
+            color: #8b9bae;
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Footer */
+        footer {
+            background: #0a1628;
+            padding: 60px 0 30px;
+            border-top: 1px solid #1a2942;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h4 {
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-size: 1.25em;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-section a {
+            color: #8b9bae;
+            text-decoration: none;
+            font-size: 1.05em;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: #00d9ff;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #1a2942;
+            color: #8b9bae;
+            font-size: 1.05em;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .extract-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .extract-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-step {
+                grid-template-columns: 60px 1fr;
+                gap: 20px;
+            }
+            
+            .step-number {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">Pi</div>
+                    <div class="logo-text">Pi Energy</div>
+                </div>
+                <div class="session-info">
+                    <span>Gold Coast to Brisbane Pilot Program</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="eligibility">
+        <div class="container">
+            <h1>
+                <span class="highlight">No-Cost</span> Solar & Battery<br>
+                For Your Home
+            </h1>
+            <p class="hero-subtitle">
+                Zero upfront investment. Pay only $0.26/kWh anytime rate for the energy you use.
+                Property supply charges passed through at cost — no mark-up. No surprises. Complete energy independence.
+            </p>
+            <a href="https://app.principleinnovation.tech" class="cta-button">Check Eligibility</a>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats container">
+        <div class="stat-card">
+            <span class="stat-number">$0</span>
+            <span class="stat-label">Upfront Cost</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-number">$0.26</span>
+            <span class="stat-label">Per kWh Anytime Rate</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-number">1,000</span>
+            <span class="stat-label">Pilot Program Homes</span>
+        </div>
+    </section>
+
+    <!-- What We Extract Section -->
+    <section class="extract-section">
+        <div class="container">
+            <h2 class="section-title">What We Analyze From Your Energy Bills</h2>
+            <div class="extract-grid">
+                <div class="extract-card">
+                    <div class="extract-icon">⚡</div>
+                    <h3>Energy Flows</h3>
+                    <p>Understanding your home's energy flows for optimal energy management</p>
+                </div>
+                <div class="extract-card">
+                    <div class="extract-icon">⚡</div>
+                    <h3>Usage Data</h3>
+                    <p>Daily avg kWh, grid/solar consumption, time-of-use breakdown for accurate sizing</p>
+                </div>
+                <div class="extract-card">
+                    <div class="extract-icon">💰</div>
+                    <h3>Rates & Tariffs</h3>
+                    <p>Fixed/TOU rates, supply charges, feed-in tariff to calculate your savings</p>
+                </div>
+                <div class="extract-card">
+                    <div class="extract-icon">📋</div>
+                    <h3>Account Details</h3>
+                    <p>NMI, retailer, power phases, existing solar details for system design</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Why Pi Energy?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-number">01</div>
+                    <h3>Zero Capital Investment</h3>
+                    <p>No purchase price, no loans, no hidden financing. Pi owns and maintains all equipment including 40-50kWh battery storage. You simply pay for energy used.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-number">02</div>
+                    <h3>Complete Peace of Mind</h3>
+                    <p>Installation, 24/7 monitoring, maintenance, and equipment replacement all included. No surprise bills, repair costs, or maintenance fees. Ever.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-number">03</div>
+                    <h3>Substantial Backup Power</h3>
+                    <p>Large-capacity batteries provide 1.5-2 days of backup during outages. Stay powered through storms and grid disruptions with complete energy security.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-number">04</div>
+                    <h3>Energy Independence</h3>
+                    <p>Generate and store your own clean energy. Reduce grid reliance and exposure to volatile energy markets. Control your energy future.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-number">05</div>
+                    <h3>Transparent Simple Pricing</h3>
+                    <p>One simple anytime rate: $0.26/kWh for all energy consumed. Property supply and network charges passed through at cost with zero mark-up. No peak/off-peak complexity. What you see is what you pay.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-number">06</div>
+                    <h3>VPP Network Benefits</h3>
+                    <p>Your battery joins Pi's Virtual Power Plant. Participate in energy arbitrage and grid stabilization. Pi handles all optimization while you enjoy the benefits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Simple 6-Step Journey</h2>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Eligibility Confirmation</h3>
+                        <p>We verify your property location (Gold Coast to Brisbane), ownership status, and system requirements. You'll receive a personalized savings estimate and system recommendation.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Energy Bill Analysis</h3>
+                        <p>Upload your recent bills (PDF or images). Our AI-powered tool analyzes your consumption patterns, rates, and usage data to determine your eligibility and potential savings. Instant result.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Site Inspection - $297</h3>
+                        <p>Safety, compliance and performance. Check existing infrastructure. Installation location compliance. System performance capabilities calculated. Fee fully applied as an energy credit on your first energy bill. Inspection report provided.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Custom Design & Engineering</h3>
+                        <p>Our engineers design your system and submit network connection application to Energex. We manage the entire approval process so you don't have to. You're kept informed every step.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Professional Installation</h3>
+                        <p>SAA-accredited installers complete your system to Australian Standards AS4777 and AS5033. Energy infrastructure, monitoring equipment, and safety systems—everything designed for energy security and energy price certainty.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Activation & Ongoing Support</h3>
+                        <p>System connected to Pi's 24/7 monitoring platform and VPP network. Start generating and storing clean energy immediately. Pay only $0.26/kWh anytime rate for energy consumed, plus property supply charges at cost — no mark-up.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="faq">
+        <div class="container">
+            <h2>Ready to Take Control of Your Energy?</h2>
+            <p>Join the pilot program and start your journey to energy independence. Upload your bills now for instant analysis and eligibility check.</p>
+            <a href="https://app.principleinnovation.tech" class="cta-button">Check Eligibility</a>
+        </div>
+    </section>
+
+    <!-- Pi Energy Footer -->
+    <script src="/pi-footer.js"></script>
+</body>
+</html>

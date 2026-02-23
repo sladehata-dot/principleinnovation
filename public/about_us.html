@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Principle and Innovation (Pi) - Pioneering Australia's energy future through intelligent systems, autonomous energy solutions, and principled innovation.">
+    <title>About Us | Principle and Innovation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --pi-navy: #0A1E3F;
+            --pi-quantum: #1E90FF;
+            --pi-silver: #C0C0C0;
+            --pi-accent: #00a86b;
+            --pi-dark: #0a1628;
+            --pi-gray-900: #1a202c;
+            --pi-gray-700: #2d3748;
+            --pi-gray-200: #e2e8f0;
+            --pi-gray-100: #f7fafc;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #e1e8ed;
+            background: #0a1628;
+            margin: 0;
+        }
+
+        /* Header/Navigation */
+        header {
+            background: #0f1d2f;
+            padding: 1.25rem 0;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #1a2942;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: white;
+            text-decoration: none;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .logo-badge {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #00d9ff 0%, #0099cc 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0a1628;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--pi-quantum);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0a1628 0%, #0f1d2f 100%);
+            color: white;
+            padding: 6rem 2rem 5rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            color: #00d9ff;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: #8b9bae;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            line-height: 1.8;
+        }
+
+        /* Vision & Mission Cards */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin: 4rem 0;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .value-card {
+            background: #1a2942;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid #243449;
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover {
+            border-color: #00d9ff;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 217, 255, 0.2);
+        }
+
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #00d9ff 0%, #0099cc 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .value-card h3 {
+            font-size: 1.75rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .value-card p {
+            font-size: 1.1rem;
+            color: #8b9bae;
+            line-height: 1.8;
+        }
+
+        .value-quote {
+            font-style: italic;
+            color: #00d9ff;
+            border-left: 4px solid #00d9ff;
+            padding-left: 1.5rem;
+            margin-top: 1.5rem;
+            font-size: 1.15rem;
+        }
+
+        /* Story Section */
+        .story-section {
+            background: #0f1d2f;
+        }
+
+        .story-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .story-content p {
+            font-size: 1.15rem;
+            color: #8b9bae;
+            margin-bottom: 2rem;
+            line-height: 1.9;
+        }
+
+        .story-content p:first-of-type {
+            font-size: 1.3rem;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        /* Principles Section */
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .principle-item {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .principle-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #00d9ff 0%, #0099cc 100%);
+            color: #0a1628;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+        }
+
+        .principle-item h4 {
+            font-size: 1.3rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .principle-item p {
+            font-size: 1rem;
+            color: #8b9bae;
+            line-height: 1.7;
+        }
+
+        /* Difference Section */
+        .difference-section {
+            background: #0a1628;
+            color: white;
+        }
+
+        .difference-section .section-title {
+            color: white;
+        }
+
+        .difference-section .section-subtitle {
+            color: #8b9bae;
+        }
+
+        .difference-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .difference-card {
+            background: #1a2942;
+            border-radius: 15px;
+            padding: 2.5rem;
+            border: 1px solid #243449;
+            transition: all 0.3s ease;
+        }
+
+        .difference-card:hover {
+            border-color: #00d9ff;
+            transform: translateY(-5px);
+        }
+
+        .difference-card h4 {
+            font-size: 1.4rem;
+            color: #00d9ff;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .difference-card p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #8b9bae;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #00d9ff 0%, #0099cc 100%);
+            color: #0a1628;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #0a1628;
+        }
+
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            color: #0a1628;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #0a1628;
+            color: white;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: #0f1d2f;
+            color: white;
+            padding: 3rem 2rem 2rem;
+            border-top: 1px solid #1a2942;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: #00d9ff;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            line-height: 2;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: #00d9ff;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .principles-grid,
+            .difference-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="/" class="logo">
+                <div class="logo-badge">Pi</div>
+                <span>Pi Energy</span>
+            </a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Where Principle Meets Innovation</h1>
+            <p class="hero-subtitle">"On the Periphery of Infinity"</p>
+            <p>We are architects of Australia's energy future, building intelligent systems that liberate households and businesses from the constraints of traditional energy markets while pioneering a new paradigm of true energy sovereignty.</p>
+        </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section class="container">
+        <h2 class="section-title">Our Foundation</h2>
+        <p class="section-subtitle">
+            At Principle and Innovation, we believe that transformative change begins with unwavering commitment to truth and the courage to reimagine what's possible.
+        </p>
+        
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">🎯</div>
+                <h3>Our Vision</h3>
+                <p>Men should be governed by principle not other men and innovation is how we improve the life of others with better products at better prices. We operate at the frontier of what's possible—on the periphery of infinity—where mathematical precision meets limitless potential.</p>
+                <p class="value-quote">"To Seek Truth and Be True"</p>
+            </div>
+
+            <div class="value-card">
+                <div class="value-icon">⚡</div>
+                <h3>Our Mission</h3>
+                <p>We liberate energy consumers from centralized control and enable genuine energy independence through intelligent systems governed by principle, not profit-seeking intermediaries. Our commitment is to deliver transparent, fair value exchange in everything we do.</p>
+                <p class="value-quote">"On the Periphery of Infinity"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="story-section">
+        <div class="container">
+            <h2 class="section-title">The Pi Story</h2>
+            <div class="story-content">
+                <p>Energy sovereignty shouldn't be a privilege reserved for the wealthy. It should be an accessible reality for every Australian household and business.</p>
+                
+                <p>Principle and Innovation was founded on this fundamental belief. We saw an energy market dominated by complexity, hidden costs, and asymmetric information—where consumers paid premium prices while their rooftops sat idle and their energy needs remained at the mercy of external forces.</p>
+                
+                <p>Like the mathematical constant π represents the relationship between a circle's circumference and diameter—infinite yet precisely calculable—we saw the opportunity to create energy solutions that are both mathematically sound and infinitely scalable.</p>
+                
+                <p>Our pilot program represents more than technological innovation. It's a fundamental restructuring of the energy relationship: zero upfront investment, transparent pricing, and genuine ownership transfer. We don't just install solar panels and batteries—we orchestrate intelligent energy ecosystems that learn, adapt, and optimize continuously.</p>
+                
+                <p>Through our Virtual Power Plant (VPP) architecture, we're democratizing access to clean energy infrastructure while creating a collective force that strengthens grid stability and accelerates Australia's renewable energy transition.</p>
+                
+                <p>We're not building a solar company. We're engineering the intelligence layer for autonomous energy—the missing infrastructure that transforms static installations into dynamic, self-optimizing systems governed by principle, not profit-seeking intermediaries.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Principles -->
+    <section class="container">
+        <h2 class="section-title">Our Operating Principles</h2>
+        <p class="section-subtitle">
+            These aren't aspirations—they're the immutable foundations of how we conduct business.
+        </p>
+        
+        <div class="principles-grid">
+            <div class="principle-item">
+                <div class="principle-number">1</div>
+                <h4>Truth as Foundation</h4>
+                <p>We build on verifiable facts, transparent data, and mathematical certainty. Our models are open, our assumptions are documented, and our promises are calculable.</p>
+            </div>
+
+            <div class="principle-item">
+                <div class="principle-number">2</div>
+                <h4>Sovereign Systems</h4>
+                <p>Energy independence requires more than equipment—it demands intelligent orchestration that adapts to your needs, not utility company incentives.</p>
+            </div>
+
+            <div class="principle-item">
+                <div class="principle-number">3</div>
+                <h4>Fair Value Exchange</h4>
+                <p>Transparent, straightforward pricing with no hidden fees. Our business model aligns our success with yours—we only succeed when you achieve energy independence and savings.</p>
+            </div>
+
+            <div class="principle-item">
+                <div class="principle-number">4</div>
+                <h4>Technology Orchestration</h4>
+                <p>We deploy both agentic AI (adaptive, intelligent decision-making) and non-agentic automation (structured, reliable processes) to optimize every aspect of energy management.</p>
+            </div>
+
+            <div class="principle-item">
+                <div class="principle-number">5</div>
+                <h4>Democratized Access</h4>
+                <p>Premium energy solutions shouldn't require premium capital. Our zero-upfront model eliminates the barrier that excludes 90% of households from energy independence.</p>
+            </div>
+
+            <div class="principle-item">
+                <div class="principle-number">6</div>
+                <h4>Long-Term Partnership</h4>
+                <p>We don't extract value—we create it together. Our 10-year commitment includes full ownership transfer, continuous optimization, and shared VPP revenues.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Makes Us Different -->
+    <section class="difference-section">
+        <div class="container">
+            <h2 class="section-title">The Pi Difference</h2>
+            <p class="section-subtitle">
+                We're not incrementally improving the old model—we're fundamentally reimagining it.
+            </p>
+            
+            <div class="difference-grid">
+                <div class="difference-card">
+                    <h4>Intelligence-Driven</h4>
+                    <p>Our Energy Intelligence Audit uses AI to analyze your complete energy profile, identifying optimization opportunities that static consultants miss. Real-time data drives continuous improvement throughout your system's lifetime.</p>
+                </div>
+
+                <div class="difference-card">
+                    <h4>Asset Orchestration</h4>
+                    <p>Your solar and battery aren't passive installations—they're actively managed assets. Our Energy Management as a Service (EMaaS) platform optimizes generation, storage, and consumption 24/7, maximizing your savings while contributing to grid stability.</p>
+                </div>
+
+                <div class="difference-card">
+                    <h4>VPP Participation</h4>
+                    <p>Your system becomes part of a distributed power network providing critical grid services—frequency control, peak demand management, and renewable integration support—while you enjoy reliable, low-cost energy.</p>
+                </div>
+
+                <div class="difference-card">
+                    <h4>Transparent Economics</h4>
+                    <p>Simple, honest pricing: $0.26/kWh anytime rate for energy consumed, with property supply charges passed through at cost — no mark-up. No complex tariff structures. You pay only for electrons you use—the way energy pricing should work.</p>
+                </div>
+
+                <div class="difference-card">
+                    <h4>Ownership Transfer</h4>
+                    <p>After 10 years of optimized performance and paid-down capital, the entire system—solar panels, batteries, inverters, monitoring—transfers to you at zero additional cost. Full sovereignty, permanently.</p>
+                </div>
+
+                <div class="difference-card">
+                    <h4>24/7 Monitoring & Support</h4>
+                    <p>Continuous system monitoring with proactive maintenance and rapid response. We identify and resolve issues before they impact your energy supply—keeping your system running at peak performance, always.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Ecosystem -->
+    <section class="container">
+        <h2 class="section-title">The Pi Ecosystem</h2>
+        <p class="section-subtitle">
+            Integrated solutions addressing energy independence and intelligent business automation.
+        </p>
+        
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">🔋</div>
+                <h3>Energy Solutions</h3>
+                <p><strong>Zero-Cost Solar & Battery Pilot:</strong> 1,000 eligible homes across the Gold Coast to Brisbane corridor receive complete solar and battery installations with zero upfront investment.</p>
+                <p><strong>VPP Integration:</strong> Collective market force creating grid stability and optimized energy management across the network.</p>
+                <p><strong>Intelligent Load Control:</strong> Dynamic tariff optimization and energy orchestration maximizing system efficiency and performance.</p>
+            </div>
+
+            <div class="value-card">
+                <div class="value-icon">⚙️</div>
+                <h3>Workflow Automation</h3>
+                <p><strong>Agentic Solutions:</strong> Intelligent, adaptive AI systems that learn and optimize autonomously.</p>
+                <p><strong>Non-Agentic Solutions:</strong> Structured, rule-based process automation for reliability and consistency.</p>
+                <p><strong>Complete Stack Integration:</strong> Data orchestration, IoT management, and intelligent control systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Join Australia's Energy Revolution?</h2>
+            <p>Be part of the pilot program that's redefining energy independence. Check your eligibility today.</p>
+            <a href="https://app.principleinnovation.tech" class="cta-button">Check Eligibility Now</a>
+        </div>
+    </section>
+
+    <!-- Pi Energy Footer -->
+    <script src="/pi-footer.js"></script>
+</body>
+</html>
