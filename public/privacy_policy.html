@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for Principle and Innovation - Learn how we protect your personal information and comply with Australian Privacy Principles.">
+    <title>Privacy Policy | Pi Energy Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #0066cc;
+            --dark-bg: #0a0f1a;
+            --card-bg: #1a1f2e;
+            --text-primary: #ffffff;
+            --text-secondary: #94a3b8;
+            --border-color: #2d3748;
+            --accent-green: #10b981;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Header/Navigation */
+        header {
+            background: rgba(10, 15, 26, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--primary-blue);
+        }
+
+        h1 {
+            font-size: 2.75rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary-blue), var(--accent-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tagline {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+
+        .meta-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .meta-item {
+            text-align: center;
+        }
+
+        .meta-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .meta-value {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: var(--primary-blue);
+            border-radius: 8px;
+            font-size: 1.125rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem;
+            color: var(--text-primary);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin: 1rem 0 1rem 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+            padding-left: 0.5rem;
+        }
+
+        /* Info Boxes */
+        .info-box {
+            background: rgba(0, 102, 204, 0.1);
+            border-left: 4px solid var(--primary-blue);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+
+        .info-box p {
+            color: var(--text-primary);
+            margin-bottom: 0;
+        }
+
+        .contact-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+        }
+
+        .contact-box p {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--accent-green);
+        }
+
+        /* Subsections */
+        .subsection {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .subsection h3 {
+            margin-top: 0;
+            font-size: 1.125rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+            margin-top: 6rem;
+            padding: 3rem 0 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+            padding: 0;
+        }
+
+        .footer-section a {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--text-primary);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            padding: 2rem 2rem 0;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 2rem 1.5rem;
+            }
+
+            .meta-info {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .section-number {
+                width: 2rem;
+                height: 2rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/index.html" class="logo">Pi</a>
+            <ul class="nav-links">
+                <li><a href="/index.html#how-it-works">How It Works</a></li>
+                <li><a href="https://app.principleinnovation.tech">Check Eligibility</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>Privacy Policy</h1>
+            <p class="tagline">"to seek truth and be true"</p>
+            
+            <div class="meta-info">
+                <div class="meta-item">
+                    <div class="meta-label">Effective Date</div>
+                    <div class="meta-value">31 March 2025</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Entity</div>
+                    <div class="meta-value">Pi Ops Pty Ltd</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">ABN</div>
+                    <div class="meta-value">85 685 996 114</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Trading As</div>
+                    <div class="meta-value">Principle and Innovation (Pi)</div>
+                </div>
+            </div>
+        </div>
+
+        <section class="section">
+            <h2><span class="section-number">1</span> Introduction</h2>
+            <p>This Privacy Policy outlines how Pi complies with the <strong>Privacy Act 1988 (Cth)</strong> and the 13 Australian Privacy Principles (APPs). It applies to all individuals who interact with Pi—including clients, prospective clients, suppliers, service providers, and visitors to our website or platforms.</p>
+            <p>This policy explains the types of personal data we collect, how we use it, who we may share it with, and how we protect it.</p>
+        </section>
+
+        <section class="section">
+            <h2><span class="section-number">2</span> Information We Collect</h2>
+            <p>We may collect the following types of information from individuals:</p>
+
+            <div class="subsection">
+                <h3>Personal Identifiable Information (PII)</h3>
+                <ul>
+                    <li>Name, phone number, email address, postal address</li>
+                    <li>Business or property details relevant to energy and service delivery</li>
+                    <li>Any other data provided voluntarily through forms, calls, or digital interactions</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>Non-Personal Information (Non-PII)</h3>
+                <ul>
+                    <li>Device type, IP address, browser, and usage data (pages visited, time spent)</li>
+                    <li>Data collected automatically through cookies and similar technologies</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <h3>Cookies and Tracking Tools</h3>
+                <p>Cookies and similar tools are used to improve your experience on Pi's platforms. You may adjust browser settings to limit cookie activity, noting that some features may be impacted.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2><span class="section-number">3</span> How We Use Your Information</h2>
+            <p>Your information may be used to:</p>
+            <ul>
+                <li>Provide, maintain, and optimise Pi's services</li>
+                <li>Communicate with you, including updates or inquiries</li>
+                <li>Enable booking, reporting, and data-driven energy solutions</li>
+                <li>Analyse usage and improve system functionality</li>
+                <li>Deliver relevant offers or marketing (with consent)</li>
+                <li>Comply with legal requirements or enforce contractual obligations</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2><span class="section-number">4</span> Sharing Your Information</h2>
+            <p><strong>We do not sell your personal data.</strong> We only disclose information where necessary to provide or improve our services. Disclosure may occur with:</p>
+            <ul>
+                <li>Communication and technology platforms used for automation and outbound agent workflows</li>
+                <li>Solar and electrical logistics providers who assist with fulfilment and delivery</li>
+                <li>Energy monitoring or control providers who assist in performance and asset optimisation</li>
+                <li>Design and modelling software platforms for generating system recommendations</li>
+            </ul>
+
+            <div class="info-box">
+                <p><strong>Example:</strong> Tradezone, a specialist logistics provider, may receive your contact and delivery details to facilitate component supply or site fulfilment.</p>
+            </div>
+
+            <p>All third parties are required to comply with privacy obligations consistent with Australian legislation and Pi's internal standards.</p>
+        </section>
+
+        <section class="section">
+            <h2><span class="section-number">5</span> Data Security</h2>
+            <p>Pi applies reasonable physical, technical, and procedural safeguards to protect personal information from loss, misuse, unauthorised access, or disclosure. No method of electronic transmission is 100% secure, and you acknowledge this when interacting with Pi's systems.</p>
+        </section>
+
+        <section class="section">
+            <h2><span class="section-number">6</span> Your Rights and Choices</h2>
+            <p>You have the right to:</p>
+            <ul>
+                <li>Access and request correction of your personal information</li>
+                <li>Withdraw consent for marketing communications</li>
+                <li>Lodge a complaint regarding privacy practices</li>
+            </ul>
+
+            <div class="contact-box">
+                <p><strong>Requests can be submitted to:</strong> <a href="mailto:info@principleinnovation.tech">info@principleinnovation.tech</a></p>
+                <p>We aim to respond to all requests within 30 days.</p>
+            </div>
+
+            <p>If you believe your concern has not been resolved satisfactorily, you may contact the <a href="https://www.oaic.gov.au/" target="_blank" rel="noopener">Office of the Australian Information Commissioner (OAIC)</a>.</p>
+        </section>
+
+        <section class="section">
+            <h2><span class="section-number">7</span> Third-Party Disclosure</h2>
+            <p>To enable delivery of Pi's solutions, we engage with selected third-party providers. These partners support operational, technical, fulfilment, and analytical functions.</p>
+            
+            <p><strong>Types of providers may include:</strong></p>
+            <ul>
+                <li>Product suppliers and logistics partners (e.g. Tradezone)</li>
+                <li>Energy system monitoring and control technology partners</li>
+                <li>Software providers for solar design and site modelling</li>
+                <li>Communication and automation platforms enabling AI agent outreach</li>
+                <li>Cloud infrastructure and CRM systems used to store and manage data</li>
+            </ul>
+
+            <p>All third-party arrangements are governed by confidentiality agreements and privacy obligations aligned with the Privacy Act 1988 (Cth).</p>
+        </section>
+
+        <section class="section">
+            <h2><span class="section-number">8</span> International Data Transfers</h2>
+            <p>If you access Pi's platforms from outside Australia, your data may be transferred or processed in Australia or other jurisdictions where Pi systems operate. By using our platforms, you consent to such transfers.</p>
+        </section>
+
+        <section class="section">
+            <h2><span class="section-number">9</span> Children's Privacy</h2>
+            <p>Pi's services are not designed for individuals under 13 years of age. We do not knowingly collect data from children. If such data is identified, we will delete it promptly.</p>
+        </section>
+
+        <section class="section">
+            <h2><span class="section-number">10</span> Third-Party Links</h2>
+            <p>Pi's platforms may include links to external websites or services. We are not responsible for the content or privacy practices of those sites. Users should review third-party privacy policies before submitting personal information.</p>
+        </section>
+
+        <section class="section">
+            <h2><span class="section-number">11</span> Policy Updates</h2>
+            <p>This Privacy Policy may be updated from time to time. Changes will be published on this page and take effect upon posting. We recommend reviewing it periodically to stay informed.</p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Program</h4>
+                <ul>
+                    <li><a href="/index.html#eligibility">Check Eligibility</a></li>
+                    <li><a href="/index.html#how-it-works">How It Works</a></li>
+                    <li><a href="/index.html#faq">FAQ</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Disclosures</h4>
+                <ul>
+                    <li><a href="/pricing_disclosure.html">Pricing Disclosure</a></li>
+                    <li><a href="/privacy_policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="/contact.html">Contact Us</a></li>
+                    <li><a href="/index.html#support">Customer Support</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/index.html#about">About Pi Energy</a></li>
+                    <li><a href="/careers.html">Careers</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; Pi Ops Pty Ltd ABN 85 685 996 114 trading as Principle and Innovation (Pi). All rights reserved 2026.</p>
+            <p>Service area: Gold Coast to Brisbane (Energex network). SAA-accredited installers. Eligibility criteria apply.</p>
+        </div>
+    </footer>
+</body>
+</html>

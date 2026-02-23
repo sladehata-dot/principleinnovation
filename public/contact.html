@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Pi Energy Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #0a1628;
+            color: #e1e8ed;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        /* Header */
+        header {
+            background: #0f1d2f;
+            padding: 20px 0;
+            border-bottom: 1px solid #1a2942;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #00d9ff 0%, #0099cc 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 20px;
+            color: #0a1628;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        
+        .back-link {
+            color: #00d9ff;
+            text-decoration: none;
+            font-size: 1.15em;
+            transition: color 0.3s;
+        }
+        
+        .back-link:hover {
+            color: #ffffff;
+        }
+        
+        /* Main Content */
+        .content-wrapper {
+            padding: 80px 0 60px;
+        }
+        
+        .page-title {
+            font-size: 4.5em;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .page-subtitle {
+            font-size: 1.7em;
+            color: #8b9bae;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        
+        /* Contact Info Section */
+        .contact-info {
+            background: #0f1d2f;
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid #1a2942;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .contact-info h2 {
+            font-size: 2.8em;
+            color: #00d9ff;
+            margin-bottom: 25px;
+        }
+        
+        .contact-info p {
+            font-size: 1.45em;
+            color: #e1e8ed;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info a {
+            color: #00d9ff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .contact-info a:hover {
+            color: #ffffff;
+        }
+        
+        /* Form Section */
+        .form-container {
+            background: #0f1d2f;
+            padding: 50px;
+            border-radius: 15px;
+            border: 1px solid #1a2942;
+            margin-bottom: 60px;
+        }
+        
+        .form-container h2 {
+            font-size: 2.8em;
+            color: #ffffff;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 30px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-size: 1.25em;
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 1.1em;
+            background: #1a2942;
+            border: 1px solid #243449;
+            border-radius: 8px;
+            color: #e1e8ed;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #00d9ff;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #8b9bae;
+        }
+        
+        .required {
+            color: #00d9ff;
+        }
+        
+        .submit-button {
+            width: 100%;
+            background: linear-gradient(135deg, #00d9ff 0%, #0099cc 100%);
+            color: #0a1628;
+            padding: 22px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.4em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 8px 25px rgba(0, 217, 255, 0.3);
+        }
+        
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(0, 217, 255, 0.4);
+        }
+        
+        .success-message {
+            display: none;
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid #00d9ff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #00d9ff;
+            font-size: 1.25em;
+        }
+        
+        .success-message.show {
+            display: block;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2.8em;
+            }
+            
+            .form-container {
+                padding: 30px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <div class="logo-icon">Pi</div>
+                    <div class="logo-text">Pi Energy</div>
+                </a>
+                <a href="/" class="back-link">← Back to Home</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="content-wrapper">
+        <div class="container">
+            <h1 class="page-title">Contact Us</h1>
+            <p class="page-subtitle">Get in touch with our team</p>
+
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h2>Direct Contact</h2>
+                <p>Email us at: <a href="mailto:info@principleinnovation.tech">info@principleinnovation.tech</a></p>
+                <p style="margin-top: 20px; font-size: 1.1em; color: #8b9bae;">Or fill out the form below and we'll get back to you within 24 hours.</p>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="form-container">
+                <div class="success-message" id="successMessage">
+                    ✓ Thank you for your message! We'll be in touch shortly.
+                </div>
+                
+                <h2>Send us a Message</h2>
+                <form id="contactForm" action="https://formspree.io/f/xgoojezr" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="0400 000 000">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject <span class="required">*</span></label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a topic...</option>
+                            <option value="eligibility">Eligibility Question</option>
+                            <option value="pilot-program">Pilot Program Information</option>
+                            <option value="pricing">Pricing & Terms</option>
+                            <option value="technical">Technical Question</option>
+                            <option value="support">Customer Support</option>
+                            <option value="careers">Careers</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message <span class="required">*</span></label>
+                        <textarea id="message" name="message" required placeholder="Tell us about your inquiry..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pi Energy Footer -->
+    <script src="/pi-footer.js"></script>
+
+    <script>
+        // Form submission handling
+        const form = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(form);
+            
+            // Send to Formspree (free service for form handling)
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // Show success message
+                    successMessage.classList.add('show');
+                    form.reset();
+                    
+                    // Scroll to success message
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    // Hide message after 5 seconds
+                    setTimeout(() => {
+                        successMessage.classList.remove('show');
+                    }, 5000);
+                } else {
+                    alert('Oops! There was a problem submitting your form. Please email us directly at info@principleinnovation.tech');
+                }
+            }).catch(error => {
+                alert('Oops! There was a problem submitting your form. Please email us directly at info@principleinnovation.tech');
+            });
+        });
+    </script>
+</body>
+</html>

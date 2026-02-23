@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers & Partnerships | Pi Energy Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #0a1628;
+            color: #e1e8ed;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        /* Header */
+        header {
+            background: #0f1d2f;
+            padding: 20px 0;
+            border-bottom: 1px solid #1a2942;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #00d9ff 0%, #0099cc 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 20px;
+            color: #0a1628;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        
+        .back-link {
+            color: #00d9ff;
+            text-decoration: none;
+            font-size: 1.15em;
+            transition: color 0.3s;
+        }
+        
+        .back-link:hover {
+            color: #ffffff;
+        }
+        
+        /* Main Content */
+        .content-wrapper {
+            padding: 80px 0;
+        }
+        
+        .page-title {
+            font-size: 4.5em;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .page-subtitle {
+            font-size: 1.7em;
+            color: #8b9bae;
+            margin-bottom: 60px;
+            text-align: center;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Intro Section */
+        .intro-section {
+            background: #0f1d2f;
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid #1a2942;
+            margin-bottom: 60px;
+        }
+        
+        .intro-section h2 {
+            font-size: 2.8em;
+            color: #00d9ff;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .intro-section p {
+            font-size: 1.05em;
+            color: #e1e8ed;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            text-align: center;
+        }
+        
+        /* Section Headers */
+        .section-header {
+            font-size: 2.8em;
+            color: #ffffff;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        /* Position Cards */
+        .positions-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .position-card {
+            background: #0f1d2f;
+            padding: 35px;
+            border-radius: 15px;
+            border: 1px solid #1a2942;
+            transition: all 0.3s;
+        }
+        
+        .position-card:hover {
+            border-color: #00d9ff;
+            transform: translateY(-5px);
+        }
+        
+        .position-card h3 {
+            font-size: 1.65em;
+            color: #00d9ff;
+            margin-bottom: 15px;
+        }
+        
+        .position-card p {
+            font-size: 1.05em;
+            color: #e1e8ed;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .position-card ul {
+            margin: 15px 0 15px 25px;
+            color: #e1e8ed;
+            font-size: 1.05em;
+        }
+        
+        .position-card li {
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+        
+        .position-requirements {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #1a2942;
+        }
+        
+        .position-requirements strong {
+            color: #ffffff;
+            font-size: 1.1em;
+        }
+        
+        /* Partnership Section */
+        .partnership-section {
+            background: linear-gradient(135deg, #0f1d2f 0%, #1a2942 100%);
+            padding: 60px 40px;
+            border-radius: 15px;
+            border: 1px solid #1a2942;
+            margin-bottom: 60px;
+        }
+        
+        .partnership-section h2 {
+            font-size: 2.8em;
+            color: #00d9ff;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .partnership-section p {
+            font-size: 1.05em;
+            color: #e1e8ed;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+        
+        .partnership-types {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .partnership-card {
+            background: #0f1d2f;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #243449;
+        }
+        
+        .partnership-card h3 {
+            font-size: 1.65em;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+        
+        .partnership-card p {
+            font-size: 1.05em;
+            color: #8b9bae;
+            line-height: 1.8;
+        }
+        
+        /* Values Section */
+        .values-section {
+            margin-bottom: 60px;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .value-card {
+            background: #0f1d2f;
+            padding: 35px;
+            border-radius: 15px;
+            border: 1px solid #1a2942;
+            text-align: center;
+        }
+        
+        .value-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .value-card h3 {
+            font-size: 1.65em;
+            color: #00d9ff;
+            margin-bottom: 15px;
+        }
+        
+        .value-card p {
+            font-size: 1.05em;
+            color: #e1e8ed;
+            line-height: 1.8;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: #0f1d2f;
+            padding: 50px;
+            border-radius: 15px;
+            border: 1px solid #1a2942;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.8em;
+            color: #ffffff;
+            margin-bottom: 25px;
+        }
+        
+        .cta-section p {
+            font-size: 1.45em;
+            color: #8b9bae;
+            margin-bottom: 35px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #00d9ff 0%, #0099cc 100%);
+            color: #0a1628;
+            padding: 22px 55px;
+            border-radius: 12px;
+            font-size: 1.4em;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 8px 25px rgba(0, 217, 255, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(0, 217, 255, 0.4);
+        }
+        
+        /* Footer */
+        footer {
+            background: #0a1628;
+            padding: 60px 0 30px;
+            border-top: 1px solid #1a2942;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #1a2942;
+            color: #8b9bae;
+            font-size: 1.05em;
+        }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            .positions-grid,
+            .partnership-types {
+                grid-template-columns: 1fr;
+            }
+            
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2.8em;
+            }
+            
+            .section-header {
+                font-size: 2.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <div class="logo-icon">π</div>
+                    <div class="logo-text">Pi Energy</div>
+                </a>
+                <a href="/" class="back-link">← Back to Home</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="content-wrapper">
+        <div class="container">
+            <h1 class="page-title">Careers & Partnerships</h1>
+            <p class="page-subtitle">Join Principle and Innovation (Pi) as we transform energy delivery through disruptive yet complementary platform services where all vertical participants benefit</p>
+
+            <!-- Intro Section -->
+            <div class="intro-section">
+                <h2>The Pi Platform Advantage</h2>
+                <p>Principle and Innovation (Pi) operates a disruptive energy services platform where retailers, aggregators, installers, and customers all benefit. As market authorities in Virtual Power Plant orchestration and peer-to-peer energy trading, we're establishing new standards for how energy is delivered, managed, and optimized. We seek skilled professionals who want job certainty, clarity, and the opportunity to scale with Australia's most innovative energy platform.</p>
+            </div>
+
+            <!-- Technical Positions -->
+            <h2 class="section-header">Technical Positions</h2>
+            <div class="positions-grid">
+                <!-- Solar & Battery Installers -->
+                <div class="position-card">
+                    <h3>Solar & Battery Installers</h3>
+                    <p>Deploy advanced solar and battery systems across Southeast Queensland. Clean technical jobs with no sales involvement—just quality installations at scale.</p>
+                    <ul>
+                        <li>Install 10kW solar arrays with 40-50kWh battery systems</li>
+                        <li>Commission VPP-integrated energy systems</li>
+                        <li>Ensure compliance with AS4777 and AS5033 standards</li>
+                        <li>Progress through Pi's internal certification program (Levels 1-3)</li>
+                        <li>Scale opportunities as Pi expands nationally</li>
+                    </ul>
+                    <div class="position-requirements">
+                        <strong>Requirements:</strong>
+                        <ul>
+                            <li>SAA accreditation (solar & battery)</li>
+                            <li>Clean Energy Council Design & Install certification (or equivalent)</li>
+                            <li>Minimum 2 years installation experience</li>
+                            <li>Strong safety culture and attention to detail</li>
+                            <li>Own tools and reliable transport</li>
+                        </ul>
+                        <p style="margin-top: 15px; color: #00d9ff;"><strong>What You Get:</strong> Job certainty, clarity on expectations, technical focus without sales pressure, and genuine scale opportunities as Pi rolls out across Australia.</p>
+                    </div>
+                </div>
+
+                <!-- Site Inspectors -->
+                <div class="position-card">
+                    <h3>Site Inspectors</h3>
+                    <p>Ideal for professionals seeking consistent field work without the demands of larger installation jobs. Conduct 5-7 comprehensive pre-installation assessments daily, focused on safety, compliance, and performance optimization.</p>
+                    <ul>
+                        <li>Check existing electrical infrastructure suitability</li>
+                        <li>Assess installation location compliance</li>
+                        <li>Calculate system performance capabilities</li>
+                        <li>Prepare detailed inspection reports</li>
+                        <li>Direct customer interface—no liaison with installers or designers</li>
+                    </ul>
+                    <div class="position-requirements">
+                        <strong>Requirements:</strong>
+                        <ul>
+                            <li>Strong understanding of safety, compliance, and performance requirements for energy asset design and deployment</li>
+                            <li>Systematic approach to inspection methodology</li>
+                            <li>Excellent communication and reporting skills</li>
+                            <li>Reliable transport and ability to manage daily schedule</li>
+                            <li>Understanding of AS/NZS 3000 (Wiring Rules) beneficial but not essential</li>
+                        </ul>
+                        <p style="margin-top: 15px; color: #00d9ff;"><strong>What You Get:</strong> Predictable daily workflow, clear scope of work, no crossover with installation teams, and steady volume as Pi scales.</p>
+                    </div>
+                </div>
+
+                <!-- Service Electricians -->
+                <div class="position-card">
+                    <h3>Service Electricians</h3>
+                    <p>Comprehensive electrical services supporting Pi's energy asset deployments. Clean technical work with job certainty and clear scope.</p>
+                    <ul>
+                        <li>Meter board upgrades and relocations</li>
+                        <li>Backup circuit installations</li>
+                        <li>Troubleshooting and diagnostics</li>
+                        <li>Preventative maintenance programs</li>
+                        <li>Prep works for system installations</li>
+                        <li>System performance optimization</li>
+                    </ul>
+                    <div class="position-requirements">
+                        <strong>Requirements:</strong>
+                        <ul>
+                            <li>Licensed electrician (A-grade preferred)</li>
+                            <li>Current electrical contractor license and insurance</li>
+                            <li>Experience with renewable energy systems beneficial</li>
+                            <li>Diagnostic and problem-solving expertise</li>
+                            <li>Availability for scheduled service and emergency callouts</li>
+                        </ul>
+                        <p style="margin-top: 15px; color: #00d9ff;"><strong>What You Get:</strong> Diversified electrical work, no sales involvement, consistent workflow, and expansion opportunities as Pi's asset base grows.</p>
+                    </div>
+                </div>
+
+                <!-- VPP Operations Specialist -->
+                <div class="position-card">
+                    <h3>VPP Operations Specialist</h3>
+                    <p>Optimize Pi's Virtual Power Plant and peer-to-peer energy marketplace—the platform where retailers, aggregators, installers, and customers all benefit.</p>
+                    <ul>
+                        <li>Monitor and optimize VPP performance across Pi's asset fleet</li>
+                        <li>Coordinate wholesale market participation and arbitrage</li>
+                        <li>Manage peer-to-peer energy trading operations</li>
+                        <li>Analyze system data and performance metrics</li>
+                        <li>Coordinate with retail partners and market operators</li>
+                    </ul>
+                    <div class="position-requirements">
+                        <strong>Requirements:</strong>
+                        <ul>
+                            <li>Electrical engineering, energy systems, or market operations background</li>
+                            <li>Understanding of NEM operations and wholesale energy markets</li>
+                            <li>Data analysis and optimization capabilities</li>
+                            <li>Experience with energy management systems or market platforms</li>
+                            <li>Strategic thinking and commercial awareness</li>
+                        </ul>
+                        <p style="margin-top: 15px; color: #00d9ff;"><strong>What You Get:</strong> Central role in Pi's platform operations, exposure to cutting-edge energy trading, and career growth with Australia's leading distributed energy innovator.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Partnership Opportunities -->
+            <div class="partnership-section">
+                <h2>Strategic Partnership Opportunities</h2>
+                <p>Principle and Innovation (Pi) operates a disruptive energy platform built on a simple principle: all vertical participants benefit. We partner with organizations seeking innovative energy solutions at scale, from fleet deployments to specialized community programs. Our platform creates value for retailers, aggregators, installers, and customers simultaneously.</p>
+                
+                <div class="partnership-types">
+                    <div class="partnership-card">
+                        <h3>Fleet Deployment Partners</h3>
+                        <p>Building owners and property managers delivering energy security and price certainty to tenants through coordinated solar and battery deployments. Benefit from VPP revenue optimization while providing tenant value.</p>
+                    </div>
+                    
+                    <div class="partnership-card">
+                        <h3>Community Housing Providers</h3>
+                        <p>Organizations providing affordable, reliable energy solutions to community housing residents. Generate operational revenue through VPP participation while delivering tenant benefits.</p>
+                    </div>
+                    
+                    <div class="partnership-card">
+                        <h3>NDIS Service Providers</h3>
+                        <p>Partners delivering energy security and resilient backup power for NDIS participants requiring reliable energy supply for medical and assistive equipment. Mission-critical reliability with economic benefits.</p>
+                    </div>
+                    
+                    <div class="partnership-card">
+                        <h3>Commercial & Industrial Partners</h3>
+                        <p>Businesses seeking energy independence, cost reduction, and operational certainty through integrated solar, battery, and VPP solutions. Platform economics that work for all participants.</p>
+                    </div>
+                </div>
+                
+                <p style="text-align: center; margin-top: 30px; font-size: 1.15em; color: #ffffff;">
+                    <strong>Partnership Requirements:</strong> Proven operational track record, alignment with Pi's quality and performance standards, commitment to long-term collaboration, and understanding of platform economics where all participants benefit.
+                </p>
+            </div>
+
+            <!-- Values Section -->
+            <div class="values-section">
+                <h2 class="section-header">What Drives Pi</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">🎯</div>
+                        <h3>Excellence</h3>
+                        <p>We demand the highest standards in safety, compliance, and performance. Every installation, every inspection, every service call represents our commitment to technical excellence.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">🤝</div>
+                        <h3>Dedication</h3>
+                        <p>We seek professionals committed to long-term growth and continuous improvement. Pi provides job certainty, clarity, and genuine scale opportunities for dedicated team members.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">💡</div>
+                        <h3>Platform Innovation</h3>
+                        <p>We're market authorities in distributed energy, operating a disruptive platform where retailers, aggregators, installers, and customers all benefit. This is energy delivery reimagined.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <h2>Ready to Join Principle and Innovation?</h2>
+                <p>Whether you're a skilled technician seeking job certainty and clarity, or a strategic partner ready to participate in Australia's most innovative energy platform—we want to hear from you.</p>
+                <a href="/contact.html" class="cta-button">Get in Touch</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pi Ops Pty Ltd ABN 85 685 996 114 trading as Principle and Innovation (Pi). All rights reserved.</p>
+                <p style="margin-top: 15px;">Service area: Gold Coast to Brisbane (Energex network). CEC-accredited installers. Eligibility criteria apply.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
